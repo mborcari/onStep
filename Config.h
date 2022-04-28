@@ -39,7 +39,7 @@
 #define BUZZER_STATE_DEFAULT          OFF //    OFF, ON Start with piezo buzzer/speaker enabled.                              Option
 
 // TIME AND LOCATION ----------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#TLS
-#define TIME_LOCATION_SOURCE          OFF //    OFF, DS3231 (I2c,) DS3234 (Spi,) TEENSY (T3.2 internal,) or GPS source.       Option
+#define TIME_LOCATION_SOURCE          ON //    OFF, DS3231 (I2c,) DS3234 (Spi,) TEENSY (T3.2 internal,) or GPS source.       Option
                                           //         Provides Date/Time, and if available, PPS & Lat/Long also.
 
 // SENSORS ----------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#SENSORS
@@ -118,9 +118,9 @@
 
 // AXIS1 RA/AZM
 // see https://onstep.groups.io/g/main/wiki/Configuration-Mount#AXIS1
-#define AXIS1_STEPS_PER_DEGREE    26420.48640 //  12800, n. Number of steps per degree:                                          <-Req'd
+#define AXIS1_STEPS_PER_DEGREE    13866.66667 //  12800, n. Number of steps per degree:                                          <-Req'd
                                           //         n = (stepper_steps * micro_steps * overall_gear_reduction)/360.0
-#define AXIS1_STEPS_PER_WORMROT         68923 //      0, n. Number steps per worm rotation (PEC Eq mode only, 0 disables PEC.)   <-Req'd
+#define AXIS1_STEPS_PER_WORMROT       38400 //      0, n. Number steps per worm rotation (PEC Eq mode only, 0 disables PEC.)   <-Req'd
                                           //         n = (AXIS1_STEPS_PER_DEGREE*360)/reduction_final_stage
 
 #define AXIS1_DRIVER_MODEL            LV8729 //    OFF, (See above.) Stepper driver model.                                      <-Often
@@ -139,7 +139,7 @@
 
 // AXIS2 DEC/ALT
 // see https://onstep.groups.io/g/main/wiki/Configuration-Mount#AXIS2
-#define AXIS2_STEPS_PER_DEGREE    26420.48640 //  12800, n. Number of steps per degree:                                          <-Req'd
+#define AXIS2_STEPS_PER_DEGREE    6933.33333        //  12800, n. Number of steps per degree:                                          <-Req'd
                                           //         n = (stepper_steps * micro_steps * overall_gear_reduction)/360.0
 
 #define AXIS2_DRIVER_MODEL            LV8729 //    OFF, (See above.) Stepper driver model.                                      <-Often
